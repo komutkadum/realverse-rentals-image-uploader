@@ -15,7 +15,7 @@ if (!fs.existsSync("./my-uploads")) {
 
 // use as middle ware
 app.use(function (req, res, next) {
-    let allowedDomains = ['http://localhost:3000','https://realverse-rentals.vercel.app/' ];
+    let allowedDomains = ['http://localhost:3000','https://realverse-rentals.vercel.app' ];
     let origin = req.headers.origin;
     if(allowedDomains.indexOf(origin) > -1){
       res.setHeader('Access-Control-Allow-Origin', origin);
